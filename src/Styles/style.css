@@ -23,7 +23,8 @@ body{
     line-height: 1.6;
     background-color: var(--body-background-clr);
     color: #ffffff;
-    min-height: 100vh;
+    height: 100vh;
+    /* min-height: 100vh; */
 }
 
 /* working with the header */
@@ -105,15 +106,20 @@ input[type="search"]:focus{
 /* styling main section */
 .main{
     padding: 60px;
+   
 }
 
 /* grid container */
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    
 }
 
 /* column one */
+.content-column-one{
+    /* background-color: red; */
+}
 /* wallet */
 .wallet{
     padding: 10px;
@@ -177,7 +183,17 @@ h4>small{
     background-color: #202020;
     padding: 16px;
     border-radius: 20px;
+    /* allowing scrollable feature */
+    height: 63%;
+    overflow-y: scroll;
 }
+
+/* hiding the scrollbar */
+.currencies::-webkit-scrollbar{
+    width: 0 !important;
+}
+
+
 .currency-container{
     display: flex;
     align-items: center;
@@ -224,7 +240,6 @@ h4>small{
 
 /* styling graph */
 .graph{
-    margin-top: 40px;
     background-color: #202020;
     display: flex;
     gap: 20px;
@@ -232,6 +247,11 @@ h4>small{
 
 
 /* column two */
+
+.content-column-two{
+    /* background-color: green; */
+    
+}
 .action-container{
     background-color: #202020;
     border-radius: 20px;
@@ -328,8 +348,17 @@ h4>small{
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
+    /* scrollable container */
+    height: 41%;
+    overflow-y: scroll;
 
 }
+/* hiding the scrollbar */
+.notifications::-webkit-scrollbar{
+    width: 0 !important;
+}
+
+
 .notifications p{
     color: #B8B8B8;
 }
@@ -360,6 +389,7 @@ h4>small{
 
 /* styling the third column */
 .content-column-three{
+    /* background-color: blue; */
 
 }
 .trophey{
@@ -390,3 +420,50 @@ h4>small{
      border-radius: 15px;
      margin: 8px;
 }
+.leaders-name{
+    font-weight: bold;
+}
+.btn-percentage{
+    background-color: #1abc7b;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: 800;
+}
+.leaders-row-dark{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+    background-color: #202020;
+    color: #171717;
+    border-radius: 10px;
+}
+
+.btn-circle-dark{
+    background-color:#e0f64b;
+    color: #171717;
+     font-size: 0.9rem;
+     padding: 5px 8px 5px 8px;
+     border: none;
+     border-radius: 15px;
+     margin: 8px;  
+}
+.leaders-name-dark{
+    font-weight: bold;
+    color: white;
+
+}
+.leaders-wallet-dark{
+    color: #848484;
+}
+
+.content-row-one{
+    grid-column: span 2;
+ 
+    
+
+}
+
