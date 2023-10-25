@@ -1,0 +1,102 @@
+
+:root{
+    --red-clr:#f13005;
+    --green-clr:#1abc7b;
+    --light-yellow-clr:#e0f64b;
+    --dark-clr:#121212;
+    --info-clr:#3498db;
+    --success-clr:#07bc0c;
+    --error-clr:#e74c3c;
+    --card-background-clr:#616161;
+    --text-clr:#ffffff;
+    --body-background-clr:#171717;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Manrope,sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* working with the header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-one{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #B8B8B8;
+ 
+}
+
+/* styling the range input */
+.slider{
+ -webkit-appearance: none;
+  height: 2px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: var(--light-yellow-clr);
+    cursor: pointer;
+  }
+
+  /* styling the search input */
+
+  .nav-two{
+    position: relative;
+  }
+
+ input[type="search"]{
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #202020;  
+   
+}
+input[type="search"]:focus{
+    outline: none;
+    text-align: center;
+}
+::placeholder{
+    padding-left: 20px;
+}
+
+.nav-two #search{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* styling the hamburger */
+.nav-three{
+    color: #e0f64b;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
