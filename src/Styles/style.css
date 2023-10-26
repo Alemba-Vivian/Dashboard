@@ -17,14 +17,31 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Manrope,sans-serif;
+    /* font-family: Manrope,sans-serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: .75rem;
     font-weight: 500;
-    line-height: 1.6;
     background-color: var(--body-background-clr);
     color: #ffffff;
-    height: 100vh;
-    /* min-height: 100vh; */
+    min-height: 100vh;
+}
+
+/* DEFAULT STYLING */
+h1{
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1.4;
+
+}
+h1.board{
+    font-size: 1.6875rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* working with the header */
@@ -35,6 +52,7 @@ body{
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 40px;
+    flex-wrap: wrap;
 }
 .nav-container{
     display: flex;
@@ -105,20 +123,26 @@ input[type="search"]:focus{
 
 /* styling main section */
 .main{
-    padding: 60px;
+    padding: 50px 50px 0 50px;
+   
    
 }
 
 /* grid container */
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,  1fr);
+    gap: 20px;
+    line-height: 1.6;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    /* height: calc(100vh - 10px); */
     
 }
 
 /* column one */
 .content-column-one{
-    /* background-color: red; */
+    height: 100%;
+     
 }
 /* wallet */
 .wallet{
@@ -184,7 +208,7 @@ h4>small{
     padding: 16px;
     border-radius: 20px;
     /* allowing scrollable feature */
-    height: 63%;
+    height: 940px;
     overflow-y: scroll;
 }
 
@@ -202,6 +226,8 @@ h4>small{
     border-bottom: 1px solid #333;
 }
 .currency-one{
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;    
     gap: 10px;
@@ -249,14 +275,13 @@ h4>small{
 /* column two */
 
 .content-column-two{
-    /* background-color: green; */
+    height: 100%;
+    
     
 }
 .action-container{
     background-color: #202020;
     border-radius: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
     padding: 10px;
 }
 
@@ -323,7 +348,7 @@ h4>small{
 }
 .transaction{
     border: 1px solid #333;
-    padding: 16px;
+    padding: 8px;
     font-weight: bold;
     border-radius: 10px;
     text-align: center;
@@ -342,14 +367,12 @@ h4>small{
 
 /* row three */
 .notifications{
-    margin-top: 20px;
+    margin-top: 25px;
     background-color: #202020;
     border-radius: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
+    padding: 20px;
     /* scrollable container */
-    height: 41%;
+    height: 610px;
     overflow-y: scroll;
 
 }
@@ -359,8 +382,9 @@ h4>small{
 }
 
 
-.notifications p{
+.notifications>p{
     color: #B8B8B8;
+    /* padding: 20px; */
 }
 .para-one{
     color: #848484;
@@ -390,6 +414,9 @@ h4>small{
 /* styling the third column */
 .content-column-three{
     /* background-color: blue; */
+    /* height: 100% */
+   
+
 
 }
 .trophey{
@@ -462,8 +489,192 @@ h4>small{
 
 .content-row-one{
     grid-column: span 2;
+    display: grid;
+    background-color: #202020;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+    margin-bottom: 30px;
+ 
+}
+/* first column */
+.graph-bar{
+    border-right: 1px solid #333;
+   /* padding: 15px; */
+   margin: 15px;
+   padding: 5px;
+}
+.digits-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* padding-right: 10px; */
+}
+.details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ 
+  
+}
+.details-one h3{
+    font-size: 1.3rem;
+}
+.details-two h4{
+    color: #848484;
+}
+.time-analysis-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart>i{
+    padding: 8px;
+    font-size: 1.6rem;
+    color: #B8B8B8;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+#btn-one{
+  background-color: #e0f64b;
+  padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.myButtons{
+    padding: 10px;
+    background-color: #171717;
+    color: #848484;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+  
+}
+.myButtons:hover{
+    background-color: #e0f64b;
+}
+.line{
+    border-bottom: 1px solid #333;
+    height:10px;  
+    /* overflow: visible;       */
+    margin: 20px 0 15px 0;
+    padding: 10px;
  
     
+}
+
+
+.value-analysis-container{
+    text-align: right;
+}
+.value-analysis-container:last-child{
+    padding-bottom: 20px;
+}
+.btn-graph{
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #1abc7b;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+.button-containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 20px; */
+   
+}
+#btn-buy,
+#btn-sell{
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding:10px 40px 10px 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+#btn-buy{
+    background-color: #e0f64b;
+}
+#btn-sell{
+    background-color: #171717;
+    color: #ffffff;
+}
+
+
+/* second column */
+.graph-percentage{
+    /* border-left: 1px solid red; */
+    padding: 5px;
+}
+.percentage-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    color: #848484;
+}
+.price-container{
+    display: flex;
+     gap: 30px;
+     align-items: center;
+}
+.cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+.cards-items{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cards-items-two{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
 }
 
+
+.cards-container button{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+.bg-green button{
+    background-color: #1abc7b;
+}
+.bg-red button{
+    background-color: var(--red-clr);
+}
+
+.yellow-star i{
+    color: #e0f64b;
+    font-size: 16px;
+}
+.dark-star{
+    color: #B8B8B8;
+    font-size: 16px;
+}
+
+.coins-container{
+    color: #848484;
+    
+}
