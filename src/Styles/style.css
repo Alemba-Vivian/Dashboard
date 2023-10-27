@@ -52,12 +52,13 @@ h2 {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 40px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .nav-container{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 10px;
 }
 .nav-one{
     display: flex;
@@ -124,6 +125,7 @@ input[type="search"]:focus{
 /* styling main section */
 .main{
     padding: 50px 50px 0 50px;
+    background-color: red;
    
    
 }
@@ -131,13 +133,33 @@ input[type="search"]:focus{
 /* grid container */
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(3,  1fr);
     gap: 20px;
     line-height: 1.6;
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     /* height: calc(100vh - 10px); */
     
 }
+
+
+/* RESPONSIVENESS */
+@media (min-width:50em) {
+    
+    .grid-span-2{
+        grid-column: span 2;
+    
+    }
+     .grid-container{
+        grid-template-columns: repeat(3,  1fr);
+     }
+  
+    
+}
+
+
+
+
+
+
 
 /* column one */
 .content-column-one{
@@ -275,7 +297,7 @@ h4>small{
 /* column two */
 
 .content-column-two{
-    height: 100%;
+    /* height: 100%; */
     
     
 }
@@ -488,7 +510,6 @@ h4>small{
 }
 
 .content-row-one{
-    grid-column: span 2;
     display: grid;
     background-color: #202020;
     grid-template-columns: repeat(2, 1fr);
@@ -496,6 +517,7 @@ h4>small{
     margin-bottom: 30px;
  
 }
+
 /* first column */
 .graph-bar{
     border-right: 1px solid #333;
